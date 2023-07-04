@@ -1,0 +1,184 @@
+:root {
+  /* Font */
+  --primary-font: Roboto, sans-serif;
+  --secondary-font: Raleway, sans-serif;
+
+  /* Colors */
+  --main-dark-cl: #434455;
+  --main-white-cl: #ffffff;
+  --title-cl: #2e2f42;
+  --logo-web-cl: #4d5ae5;
+  --cloud-cl: #f4f4fd;
+  --bt-hover-cl: #404bbf;
+
+  /* Others */
+}
+/* Body */
+
+body {
+  font-family: var(--primary-font);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  background-color: var(--main-white-cl);
+  color: var(--main-dark-cl);
+}
+
+/* Reset */
+
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+.list {
+  list-style: none;
+}
+.adress {
+  font-style: normal;
+}
+.btn {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Header styles */
+
+.logo {
+  font-family: var(--secondary-font);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--logo-web-cl);
+}
+.studio-dark {
+  color: var(--title-cl);
+}
+.header-list {
+  font-weight: 500;
+  color: var(--title-cl);
+}
+
+.header-nav-link:hover,
+.header-nav-link:focus {
+  color: var(--bt-hover-cl);
+}
+
+.header-contact:hover,
+.header-contact:focus {
+  color: var(--bt-hover-cl);
+}
+
+/* hero styles */
+
+.hero {
+  background-color: var(--title-cl);
+}
+.hero-title {
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--main-white-cl);
+}
+.hero-btn {
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  color: var(--main-white-cl);
+  background-color: var(--logo-web-cl);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--bt-hover-cl);
+}
+
+/* features styles */
+
+.features-subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--title-cl);
+}
+
+/* activity styles */
+
+.activity-title {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--title-cl);
+}
+
+/* tiam styles */
+
+.team {
+  background-color: var(--cloud-cl);
+}
+.team-title {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--title-cl);
+}
+.team-item {
+  background-color: var(--main-white-cl);
+}
+.team-subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--title-cl);
+}
+.team-text {
+  text-align: center;
+}
+
+/* footer styles*/
+
+.footer {
+  background-color: var(--title-cl);
+}
+.studio-light {
+  color: var(--cloud-cl);
+}
+.footer-text {
+  color: var(--cloud-cl);
+}
+
+/* portfolio styles */
+.filters-item {
+  background-color: var(--cloud-cl);
+}
+.filters-btn {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--logo-web-cl);
+  background-color: var(--cloud-cl);
+}
+.filters-btn:hover,
+.filters-btn:focus {
+  color: var(--main-white-cl);
+  background-color: var(--bt-hover-cl);
+}
+.card-item {
+  background-color: var(--main-white-cl);
+}
+.card-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--title-cl);
+}
