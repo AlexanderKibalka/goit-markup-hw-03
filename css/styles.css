@@ -10,8 +10,12 @@
   --logo-web-cl: #4d5ae5;
   --cloud-cl: #f4f4fd;
   --bt-hover-cl: #404bbf;
+  --cornflower: #e7e9fc;
 
   /* Others */
+  --items: 4;
+  --indent-vertical: 24px;
+  --indent-horizontal: var(--indent-vertical);
 }
 /* Body */
 
@@ -26,12 +30,44 @@ body {
 
 /* Reset */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .link {
   text-decoration: none;
   color: currentColor;
 }
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .adress {
   font-style: normal;
@@ -39,11 +75,52 @@ body {
 .btn {
   cursor: pointer;
   font-family: inherit;
+  border: none;
+}
+
+/* Base style */
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.container {
+  max-width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--indent-horizontal);
+  column-gap: var(--indent-vertical);
+}
+
+.card-set-item {
+  flex-basis: calc(
+    (100% - var(--indent-vertical) * (var(--items) - 1)) / var(--items)
+  );
 }
 
 /* Header styles */
 
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  padding: 24px 0;
+}
+
 .logo {
+  margin-right: 76px;
   font-family: var(--secondary-font);
   font-weight: 800;
   font-size: 18px;
@@ -58,11 +135,20 @@ body {
 .header-list {
   font-weight: 500;
   color: var(--title-cl);
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .header-nav-link:hover,
 .header-nav-link:focus {
   color: var(--bt-hover-cl);
+}
+
+.header-contact {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .header-contact:hover,
@@ -73,6 +159,8 @@ body {
 /* hero styles */
 
 .hero {
+  padding-top: 188px;
+  padding-bottom: 188px;
   background-color: var(--title-cl);
 }
 .hero-title {
@@ -81,13 +169,24 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--main-white-cl);
+  width: 496px;
+  margin: 0 auto;
+  margin-bottom: 48px;
 }
 .hero-btn {
   font-weight: 500;
-  letter-spacing: 0.04em;
+  font-size: 16px;
   line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  display: block;
+  min-width: 169px;
+  min-height: 56px;
+  padding: 16px 32px;
+  margin: 0 auto;
   color: var(--main-white-cl);
   background-color: var(--logo-web-cl);
+  border-radius: 4px;
 }
 
 .hero-btn:hover,
@@ -97,7 +196,15 @@ body {
 
 /* features styles */
 
+.features {
+  padding-top: 120px;
+}
+.features-item {
+  width: 264px;
+}
+
 .features-subtitle {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -114,10 +221,14 @@ body {
   text-transform: capitalize;
   color: var(--title-cl);
 }
+.activity-list {
+  --items: 3;
+}
 
 /* tiam styles */
 
 .team {
+  padding-bottom: 100px;
   background-color: var(--cloud-cl);
 }
 .team-title {
@@ -146,6 +257,7 @@ body {
 /* footer styles*/
 
 .footer {
+  padding: 100px 0;
   background-color: var(--title-cl);
 }
 .studio-light {
@@ -157,21 +269,33 @@ body {
 
 /* portfolio styles */
 .filters-item {
+  --items: 5;
   background-color: var(--cloud-cl);
 }
 .filters-btn {
+  display: inline-flex;
+  min-width: 169px;
+  min-height: 56px;
+  padding: 16px 32px;
   font-family: inherit;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--logo-web-cl);
   background-color: var(--cloud-cl);
+  border-radius: 4px;
 }
 .filters-btn:hover,
 .filters-btn:focus {
   color: var(--main-white-cl);
   background-color: var(--bt-hover-cl);
 }
+.card-list {
+  --items: 3;
+  --indent-vertical: 24px;
+  --indent-horizontal: 48px;
+}
+
 .card-item {
   background-color: var(--main-white-cl);
 }
@@ -181,4 +305,10 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--title-cl);
+}
+
+.card-content {
+  padding: 32px 16px;
+  border: 1px solid var(--cornflower);
+  border-top: none;
 }
