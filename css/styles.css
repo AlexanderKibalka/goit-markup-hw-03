@@ -89,8 +89,6 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 .card-set {
   display: flex;
@@ -112,11 +110,13 @@ img {
   align-items: center;
   justify-content: space-between;
 }
+.header {
+  padding: 24px 0;
+}
 
 .header-nav {
   display: flex;
   align-items: center;
-  padding: 24px 0;
 }
 
 .logo {
@@ -169,7 +169,7 @@ img {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--main-white-cl);
-  width: 496px;
+  max-width: 496px;
   margin: 0 auto;
   margin-bottom: 48px;
 }
@@ -197,7 +197,7 @@ img {
 /* features styles */
 
 .features {
-  padding-top: 120px;
+  padding: 120px 0;
 }
 .features-item {
   width: 264px;
@@ -237,6 +237,9 @@ img {
   padding-top: 120px;
   background-color: var(--cloud-cl);
 }
+.team-card-content {
+  padding: 32px 16px;
+}
 .team-title {
   font-size: 36px;
   line-height: 1.11;
@@ -248,6 +251,7 @@ img {
 }
 .team-item {
   background-color: var(--main-white-cl);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-subtitle {
   font-weight: 500;
@@ -256,12 +260,10 @@ img {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--title-cl);
-  margin-top: 32px;
   margin-bottom: 8px;
 }
 .team-text {
   text-align: center;
-  margin-bottom: 32px;
 }
 
 /* footer styles*/
@@ -270,16 +272,22 @@ img {
   padding: 100px 0;
   background-color: var(--title-cl);
 }
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
+}
 .studio-light {
   color: var(--cloud-cl);
 }
 .footer-text {
   color: var(--cloud-cl);
   max-width: 264px;
-  margin-top: 16px;
 }
 
 /* portfolio styles */
+.header-portfolio {
+  border-bottom: 1px solid var(--cornflower);
+}
 .portfolio {
   padding-top: 96px;
   padding-bottom: 120px;
@@ -303,7 +311,7 @@ img {
   gap: 24px;
   max-width: 169px;
   max-height: 56px;
-  padding: 16px 32px;
+  padding: 12px 24px;
   font-family: inherit;
   font-weight: 500;
   line-height: 1.5;
@@ -311,11 +319,13 @@ img {
   color: var(--logo-web-cl);
   background-color: var(--cloud-cl);
   border-radius: 4px;
+  border: 1px solid var(--cornflower);
 }
 .filters-btn:hover,
 .filters-btn:focus {
   color: var(--main-white-cl);
   background-color: var(--bt-hover-cl);
+  border: 1px solid transparent;
 }
 .card-list {
   --items: 3;
@@ -332,6 +342,7 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--title-cl);
+  margin-bottom: 8px;
 }
 
 .card-content {
