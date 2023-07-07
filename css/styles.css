@@ -111,12 +111,16 @@ img {
   justify-content: space-between;
 }
 .header {
-  padding: 24px 0;
+  border-bottom: 1px solid var(--cornflower);
 }
 
 .header-nav {
   display: flex;
   align-items: center;
+}
+
+.heder-logo {
+  padding: 24px 0;
 }
 
 .logo {
@@ -139,6 +143,9 @@ img {
   align-items: center;
   gap: 40px;
 }
+.header-nav-link {
+  padding: 24px 0;
+}
 
 .header-nav-link:hover,
 .header-nav-link:focus {
@@ -154,6 +161,10 @@ img {
 .header-contact:hover,
 .header-contact:focus {
   color: var(--bt-hover-cl);
+}
+
+.header-contact-item {
+  padding: 24px 0;
 }
 
 /* hero styles */
@@ -285,9 +296,7 @@ img {
 }
 
 /* portfolio styles */
-.header-portfolio {
-  border-bottom: 1px solid var(--cornflower);
-}
+
 .portfolio {
   padding-top: 96px;
   padding-bottom: 120px;
